@@ -7,6 +7,49 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+# Attach old packages
+library(tidyverse)
+library(usethis)
+library(janitor)
+
+# Attach new packages
+library(beepr)
+library(praise)
+library(cowsay)
+library(paletteer)
+library(sf)
 ```
 
+## beeper beeps
 
+Use the function `beep()` in the beepr package to make an audio alert when your code is sone running.
+
+```{r, eval = FALSE}
+for (i in rev(seq(1:9999))) {
+  
+  print(paste(i, "bottles of beer on the wall"))
+  
+}
+
+# beep(6)
+```
+
+## praise and cowsay
+
+Packages built with a single purpose: to be kind and fun.
+
+```{r}
+praise("${Exclamation}, ${EXCLAMATION}... ${exclamation}!!!!")
+
+praise("Holy ${creating}, Batman - this code is ${ADJECTIVE}!")
+```
+
+Use cowsay::say() to make a character say something to you.
+
+## Make this a git controlled document
+
+Two commands:
+
+- `usethis::use_git()`
+- `usethis::use_github()`
